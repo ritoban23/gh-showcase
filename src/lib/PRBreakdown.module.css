@@ -1,0 +1,264 @@
+.container {
+  width: 100%;
+  margin-top: 32px;
+  box-sizing: border-box;
+  font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+}
+
+.sectionTitle {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #0f172a;
+  margin: 0 0 20px 0;
+  letter-spacing: -0.02em;
+  font-family: 'Instrument Serif', 'Times New Roman', 'Georgia', serif;
+  opacity: 0.7;
+}
+
+.progressBar {
+  display: flex;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #eee;
+  margin-bottom: 15px;
+}
+
+.segment {
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.accordionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.accordionItem {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.accordionItem:hover {
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.accordionHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background-color: #fafafa;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.accordionHeader:hover {
+  background-color: #f5f5f5;
+}
+
+.accordionHeader:active {
+  background-color: #efefef;
+}
+
+.headerContent {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.categoryTitle {
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+}
+
+.accordionIcon {
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
+
+.accordionContent {
+  padding: 8px;
+  background-color: white;
+  max-height: 300px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.accordionContent::-webkit-scrollbar {
+  width: 6px;
+}
+
+.accordionContent::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.accordionContent::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+.prCard {
+  display: block;
+  padding: 16px;
+  margin-bottom: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  cursor: pointer;
+}
+
+.prCard:last-child {
+  margin-bottom: 0;
+}
+
+.prCard:hover {
+  background-color: #fafafa;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.prContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.prTitle {
+  font-size: 14.5px;
+  color: #0f172a;
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  text-align: left;
+}
+
+.prCard:hover .prTitle {
+  color: #0ea5e9;
+}
+
+.prMeta {
+  font-size: 12.5px;
+  color: #64748b;
+  margin-top: 0;
+  text-align: left;
+}
+
+.arrowIcon {
+  flex-shrink: 0;
+  color: #94a3b8;
+  transition: all 0.2s ease;
+  margin-top: 2px;
+}
+
+.prCard:hover .arrowIcon {
+  color: #0ea5e9;
+  transform: translate(2px, -2px);
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* Dark mode styles */
+:global(.dark) .sectionTitle {
+  color: #f1f5f9;
+}
+
+:global(.dark) .progressBar {
+  background-color: #334155;
+}
+
+:global(.dark) .accordionItem {
+  border-color: #334155;
+}
+
+:global(.dark) .accordionItem:hover {
+  border-color: #475569;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+:global(.dark) .accordionHeader {
+  background-color: #334155;
+}
+
+:global(.dark) .accordionHeader:hover {
+  background-color: #3b4757;
+}
+
+:global(.dark) .accordionHeader:active {
+  background-color: #475569;
+}
+
+:global(.dark) .categoryTitle {
+  color: #f1f5f9;
+}
+
+:global(.dark) .accordionIcon {
+  color: #94a3b8;
+}
+
+:global(.dark) .accordionContent {
+  background-color: #1e293b;
+}
+
+:global(.dark) .accordionContent::-webkit-scrollbar-track {
+  background: #334155;
+}
+
+:global(.dark) .accordionContent::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+:global(.dark) .prCard {
+  background-color: #1e293b;
+  border-color: #334155;
+}
+
+:global(.dark) .prCard:hover {
+  background-color: #283548;
+  border-color: #475569;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .prTitle {
+  color: #f1f5f9;
+}
+
+:global(.dark) .prCard:hover .prTitle {
+  color: #38bdf8;
+}
+
+:global(.dark) .prMeta {
+  color: #94a3b8;
+}
+
+:global(.dark) .arrowIcon {
+  color: #64748b;
+}
+
+:global(.dark) .prCard:hover .arrowIcon {
+  color: #38bdf8;
+}
