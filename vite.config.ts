@@ -11,7 +11,20 @@ export default defineConfig({
     // so users get autocomplete when using your library.
     dts({ 
       include: ['src/lib'],
-      outDir: 'dist'
+      outDir: 'dist',
+      insertTypesEntry: true,
+      copyDtsFiles: true,
+      staticImport: true,
+      beforeWriteFile: (filePath, content) => {
+        // Copy the main type definition as index.d.ts
+        if (filePath.endsWith('main.d.ts')) {
+          return {
+            filePath: filePath.replace('main.d.ts', 'index.d.ts'),
+            content
+          };
+        }
+        return { filePath, content };
+      }
     })
   ],
   build: {

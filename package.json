@@ -1,25 +1,35 @@
 {
   "name": "gh-showcase",
   "private": false,
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "description": "A beautiful React component to showcase GitHub profiles with merged PRs, contribution graphs, and portfolio-style UI",
   "keywords": ["react", "github", "component", "showcase", "portfolio", "ui", "contributions"],
-  "author": "Your Name",
+  "author": "ritoban23",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/gh-showcase"
+    "url": "https://github.com/ritoban23/gh-showcase"
+  },
+  "bugs": {
+    "url": "https://github.com/ritoban23/gh-showcase/issues"
   },
   "main": "./dist/gh-showcase.umd.cjs",
   "module": "./dist/gh-showcase.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "import": "./dist/gh-showcase.js",
-      "require": "./dist/gh-showcase.umd.cjs"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/gh-showcase.js"
+      },
+      "require": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/gh-showcase.umd.cjs"
+      }
     },
     "./style.css": "./dist/gh-showcase.css"
   },

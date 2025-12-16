@@ -1,3 +1,6 @@
+// Import fonts
+import './styles/fonts.css';
+
 // This exports your main component so others can use it
 export { default as Showcase } from './Showcase';
 
