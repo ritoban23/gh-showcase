@@ -1,4 +1,8 @@
-﻿# gh-showcase
+﻿<p align="center">
+  <img src="public/gh-showcase-logo.png" alt="gh-showcase logo" width="350" />
+</p>
+
+# gh-showcase
 
 [![npm version](https://img.shields.io/npm/v/gh-showcase.svg)](https://www.npmjs.com/package/gh-showcase)
 [![GitHub](https://img.shields.io/github/stars/ritoban23/gh-showcase?style=social)](https://github.com/ritoban23/gh-showcase)
@@ -36,9 +40,9 @@ function App() {
 
 See how `gh-showcase` looks in a real portfolio:
 
-<img src="showcase1).png" alt="Showcase Example 1" width="600" />
+<img src="public/showcase1).png" alt="Showcase Example 1" width="600" />
 
-<img src="showcase2.png" alt="Showcase Example 2" width="600" />
+<img src="public/showcase2.png" alt="Showcase Example 2" width="600" />
 
 ## 🔗 Links
 
